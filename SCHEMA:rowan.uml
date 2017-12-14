@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>104006ff-673f-46eb-b63f-e04621bebd1f.SCHEMA:rowan</OriginalElement>
+  <nodes>
+    <node x="-89.0" y="351.0">104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.migrations</node>
+    <node x="276.0" y="-20.0">104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.trees</node>
+    <node x="-80.0" y="4.0">104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.languages</node>
+    <node x="-82.0" y="466.0">104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.password_resets</node>
+    <node x="647.0" y="-17.0">104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.users</node>
+    <node x="629.75" y="273.0">104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.tree_images</node>
+    <node x="220.75" y="322.0">104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.tree_names</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.tree_images" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.users">
+      <point x="52.25" y="-70.5" />
+      <point x="63.5" y="92.5" />
+    </edge>
+    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.tree_names" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.users">
+      <point x="81.0" y="-92.5" />
+      <point x="482.25" y="287.0" />
+      <point x="574.5" y="238.0" />
+      <point x="-63.5" y="92.5" />
+    </edge>
+    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.tree_names" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.languages">
+      <point x="-81.0" y="-92.5" />
+      <point x="200.25" y="279.0" />
+      <point x="113.5" y="221.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.tree_names" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.trees">
+      <point x="0.0" y="-92.5" />
+      <point x="-55.25" y="59.5" />
+    </edge>
+    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.tree_images" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.trees">
+      <point x="-52.25" y="-70.5" />
+      <point x="592.0" y="207.0" />
+      <point x="565.75" y="187.0" />
+      <point x="55.25" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="380.0" y="281.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Key columns</Category>
+  </Categories>
+</Diagram>
+
