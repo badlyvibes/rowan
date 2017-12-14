@@ -15,6 +15,7 @@ class CreateTreeNamesTable extends Migration
     {
         Schema::create('tree_names', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('common_name');
             $table->integer('tree_id')->unsigned();
             $table->integer('language_id')->unsigned();
             $table->integer('user_id')->unsigned();
