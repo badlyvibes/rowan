@@ -21,6 +21,8 @@ class CreateLanguagesTable extends Migration
             $table->timestamps();
         });
 
+
+
         DB::table('languages')->insert([
             'iso_name' => 'Abkhazian',
             'native_name' => 'аҧсуа бызшәа, аҧсшәа',
@@ -698,6 +700,8 @@ class CreateLanguagesTable extends Migration
         ]);
         DB::table('languages')->insert(['iso_name' => 'Zulu', 'native_name' => 'isiZulu', 'iso_639_1_code' => 'zu']);
 
+        $now = date('Y-m-d H:i:s');
+        DB::table('languages')->update(['created_at' => $now, 'updated_at' => $now]);
 
     }
 

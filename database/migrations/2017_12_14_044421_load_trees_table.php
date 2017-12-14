@@ -18,5 +18,7 @@ class LoadTreesTable extends Migration
                 DB::table('trees')->insert(['taxon_name' => $row->taxon_name]);
             }
         });
-    }
+
+        $now = date('Y-m-d H:i:s');
+        DB::table('trees')->update(['created_at' => $now, 'updated_at' => $now]);    }
 }
