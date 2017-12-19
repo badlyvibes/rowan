@@ -10,7 +10,7 @@
                 <a href="https://en.wikipedia.org/wiki/{{$commonName->language->iso_name}}_language"
                 target="_blank">{{$commonName->language->iso_name}}</a>
                 @if ($commonName->language->native_name != $commonName->language->iso_name)
-                    &rarr; {{$commonName->language->native_name}}
+                    : {{$commonName->language->native_name}}
                 @endif
             </td>
         </tr>
