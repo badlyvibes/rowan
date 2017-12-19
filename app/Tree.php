@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 
 class Tree extends Model
 {
+
+    use Searchable;
 
     public function scopeName($query, $name)
     {
@@ -31,6 +34,21 @@ class Tree extends Model
     public function commonNames()
     {
         return $this->hasMany(CommonName::class);
+    }
+
+    public function searchableAs()
+    {
+        return 'rowan_index';
+    }
+
+    public function toSearchableArray()
+    {
+        $extra_data = [];
+        $extra_data['common_names'] = array_map(function ($data) {
+            return $data['name'];
+        }, $this->commonNames->toArray());
+
+        return array_merge($this->toArray(), $extra_data);
     }
 
 }
