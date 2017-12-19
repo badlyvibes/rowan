@@ -15,7 +15,9 @@ class CreateTreesTable extends Migration
     {
         Schema::create('trees', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('taxon_name');
+            $table->string('genus');
+            $table->string('species');
+            $table->string('name');
             $table->timestamps();
         });
     }

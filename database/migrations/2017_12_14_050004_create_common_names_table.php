@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTreeImagesTable extends Migration
+class CreateCommonNamesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateTreeImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tree_images', function (Blueprint $table) {
+        Schema::create('common_names', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->integer('tree_id')->unsigned();
+            $table->integer('language_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->foreign('tree_id')->references('id')->on('trees');
+            $table->foreign('language_id')->references('id')->on('languages');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
@@ -30,6 +33,6 @@ class CreateTreeImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tree_images');
+        Schema::dropIfExists('common_names');
     }
 }

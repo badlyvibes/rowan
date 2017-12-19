@@ -13,12 +13,17 @@ class LoadTreesTable extends Migration
      */
     public function up()
     {
-        Excel::filter('chunk')->load(database_path('seeds/csv/trees.csv'))->chunk(250, function($results) {
+        Excel::filter('chunk')->load(database_path('seeds/csv/trees.csv'))->chunk(250, function ($results) {
             foreach ($results as $row) {
-                DB::table('trees')->insert(['taxon_name' => $row->taxon_name]);
+                DB::table('trees')->insert([
+                    'name' => $row->taxon_name,
+                    'genus' => mb_split(' ', $row->taxon_name)[0],
+                    'species' => mb_split(' ', $row->taxon_name)[1]
+                ]);
             }
         });
 
         $now = date('Y-m-d H:i:s');
-        DB::table('trees')->update(['created_at' => $now, 'updated_at' => $now]);    }
+        DB::table('trees')->update(['created_at' => $now, 'updated_at' => $now]);
+    }
 }
