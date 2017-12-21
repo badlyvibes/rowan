@@ -38,7 +38,7 @@
      id="namedview18"
      showgrid="false"
      inkscape:zoom="4.9166667"
-     inkscape:cx="24"
+     inkscape:cx="-10.881356"
      inkscape:cy="24"
      inkscape:window-x="1366"
      inkscape:window-y="24"
@@ -94,23 +94,23 @@
      fill="#FBBC05"
      d="M0 37V11l17 13z"
      id="path10"
-     style="filter:url(#filter3360)" />
+     style="filter:url(#filter3360);fill:#ffffff" />
   <path
      clip-path="url(#b)"
      fill="#EA4335"
      d="M0 11l17 13 7-6.1L48 14V0H0z"
      id="path12"
-     style="filter:url(#filter3356)" />
+     style="filter:url(#filter3356);fill:#b3b3b3" />
   <path
      clip-path="url(#b)"
      fill="#34A853"
      d="M0 37l30-23 7.9 1L48 0v48H0z"
      id="path14"
-     style="filter:url(#filter3352)" />
+     style="filter:url(#filter3352);fill:#e6e6e6" />
   <path
      clip-path="url(#b)"
      fill="#4285F4"
      d="M48 48L17 24l-4-3 35-10z"
      id="path16"
-     style="filter:url(#filter3348)" />
+     style="filter:url(#filter3348);fill:#cccccc" />
 </svg>
