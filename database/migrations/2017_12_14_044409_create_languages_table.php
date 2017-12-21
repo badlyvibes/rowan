@@ -21,8 +21,6 @@ class CreateLanguagesTable extends Migration
             $table->timestamps();
         });
 
-
-
         DB::table('languages')->insert([
             'iso_name' => 'Abkhazian',
             'native_name' => 'аҧсуа бызшәа, аҧсшәа',
@@ -134,7 +132,7 @@ class CreateLanguagesTable extends Migration
         ]);
         DB::table('languages')->insert([
             'iso_name' => 'Chinese',
-            'native_name' => '中文(Zhōngwén), 汉语, 漢語',
+            'native_name' => '中文, 汉语, 漢語',
             'code' => 'zh'
         ]);
         DB::table('languages')->insert([
@@ -373,13 +371,13 @@ class CreateLanguagesTable extends Migration
             'code' => 'la'
         ]);
         DB::table('languages')->insert([
-            'iso_name' => 'Luxembourgish, Letzeburgesch',
+            'iso_name' => 'Luxembourgish',
             'native_name' => 'Lëtzebuergesch',
             'code' => 'lb'
         ]);
         DB::table('languages')->insert(['iso_name' => 'Ganda', 'native_name' => 'Luganda', 'code' => 'lg']);
         DB::table('languages')->insert([
-            'iso_name' => 'Limburgan, Limburger, Limburgish',
+            'iso_name' => 'Limburgan, Limburgish',
             'native_name' => 'Limburgs',
             'code' => 'li'
         ]);
@@ -487,7 +485,7 @@ class CreateLanguagesTable extends Migration
         ]);
         DB::table('languages')->insert(['iso_name' => 'Ojibwa', 'native_name' => 'ᐊᓂᔑᓈᐯᒧᐎᓐ', 'code' => 'oj']);
         DB::table('languages')->insert([
-            'iso_name' => 'Church Slavic, Church Slavonic, Old Church Slavonic, Old Slavonic, Old Bulgarian',
+            'iso_name' => 'Church Slavonic',
             'native_name' => 'ѩзыкъ словѣньскъ',
             'code' => 'cu'
         ]);
@@ -536,7 +534,7 @@ class CreateLanguagesTable extends Migration
         ]);
         DB::table('languages')->insert(['iso_name' => 'Rundi', 'native_name' => 'Ikirundi', 'code' => 'rn']);
         DB::table('languages')->insert([
-            'iso_name' => 'Romanian, Moldavian, Moldovan',
+            'iso_name' => 'Romanian, Moldovan',
             'native_name' => 'Română',
             'code' => 'ro'
         ]);
@@ -650,7 +648,7 @@ class CreateLanguagesTable extends Migration
         DB::table('languages')->insert(['iso_name' => 'Tsonga', 'native_name' => 'Xitsonga', 'code' => 'ts']);
         DB::table('languages')->insert([
             'iso_name' => 'Tatar',
-            'native_name' => 'татар теле, tatar tele',
+            'native_name' => 'татар теле',
             'code' => 'tt'
         ]);
         DB::table('languages')->insert(['iso_name' => 'Twi', 'native_name' => 'Twi', 'code' => 'tw']);
