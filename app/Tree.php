@@ -15,6 +15,11 @@ class Tree extends Model
         return $query->where('name', 'like', '%' . $name . '%')->get();
     }
 
+    public static function id($id)
+    {
+        return static::where('id', $id)->get();
+    }
+
     public static function genus($genus)
     {
         return static::where('genus', $genus)->get();
