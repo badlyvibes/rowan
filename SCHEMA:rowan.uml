@@ -20,34 +20,32 @@
       <point x="286.5" y="215.0" />
       <point x="-63.5" y="92.5" />
     </edge>
-    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.common_names" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.languages">
-      <point x="81.0" y="-92.5" />
-      <point x="494.5" y="215.0" />
-      <point x="609.5" y="215.0" />
-      <point x="0.0" y="81.5" />
-    </edge>
     <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.common_names" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.trees">
       <point x="-81.0" y="-92.5" />
       <point x="332.5" y="205.0" />
       <point x="152.75" y="205.0" />
       <point x="50.25" y="81.5" />
     </edge>
-    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.images" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.trees">
-      <point x="-52.25" y="-70.5" />
-      <point x="-50.25" y="81.5" />
+    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.common_names" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.languages">
+      <point x="81.0" y="-92.5" />
+      <point x="494.5" y="215.0" />
+      <point x="609.5" y="215.0" />
+      <point x="0.0" y="81.5" />
     </edge>
     <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.common_names" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.users">
       <point x="0.0" y="-92.5" />
       <point x="63.5" y="92.5" />
     </edge>
+    <edge source="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.images" target="104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.trees">
+      <point x="-52.25" y="-70.5" />
+      <point x="-50.25" y="81.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5906288532675709" x="361.0" y="395.5" />
-  <SelectedNodes>
-    <node>104006ff-673f-46eb-b63f-e04621bebd1f.TABLE:rowan.migrations</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.8448828606658445" x="399.5032830153923" y="442.92863647168184" />
+  <SelectedNodes />
   <Categories>
-    <Category>Key columns</Category>
     <Category>Columns</Category>
+    <Category>Key columns</Category>
   </Categories>
 </Diagram>
 
