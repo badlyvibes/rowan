@@ -1,16 +1,36 @@
-<h6>
-    <strong>
-    <em>
-        <a href="/genus/{{strtolower($tree->genus)}}">{{$tree->genus}}</a>
-        <a href="/genus/{{strtolower($tree->genus)}}/species/{{$tree->species}}">{{$tree->species}}</a>
-    </em>
-    </strong>
-</h6>
 
-@include('partials.links')
+<div class="rowan-tree-title">
+    <div class="h5" style="float: left">
+        <strong>
+        <em>
+            <a href="/genus/{{strtolower($tree->genus)}}">{{$tree->genus}}</a>
+            <a href="/genus/{{strtolower($tree->genus)}}/species/{{$tree->species}}">{{$tree->species}}</a>
+        </em>
+        </strong>
+    </div>
+    <div style="float: right">
+        @include('partials.links')
+    </div>
+    <div class="clearfix"></div>
+</div>
 
-<div style="float: right; text-align: right" class="small">ID <a href="/tree/{{$tree->id}}">{{$tree->id}}</a></div>
+<div class="rowan-common-name-form">
+    {!! Form::open(['url' => 'add_common_name', 'class'=>'form-horizontal form-inline']) !!}
+        {!! Form::hidden('tree_id', $tree->id) !!}
+        {!! Form::hidden('user_id', 1) !!}
+        <div>
+            <div style="width: 30%; float: left">
+                {!! Form::select('language_id', $languages, 41, ['class' => 'form-control form-inline', 'autofocus' => 'autofocus']) !!}
+            </div>
+            <div style="float:right; width: 47%">
+                {!! Form::text('name', null, ['class' => 'form-control form-inline', 'placeholder' => 'Common Name']) !!}
+                <i class="glyphicon glyphicon-user form-control-feedback"></i>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    {!! Form::close() !!}
+</div>
 
-@include('partials.common_name')
-
-<hr style="border: 1px dotted #a9a9a9">
+<div class="rowan-tree">
+    @include('partials.common_name')
+</div>
