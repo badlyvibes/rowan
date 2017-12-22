@@ -11,7 +11,7 @@
     <body class="rowan-main">
     <div class="details-container rowan-main">
         <div class="container-fluid rowan-header">
-            <a href="/trees"><img style="height: 45px; float: left;"
+            <a href="/"><img style="height: 45px; float: left;"
                src="{{ asset('images/sorbus_aucuparia.svg') }}" alt="Index"></a>
             @include('partials.search_form')
             <div style="clear: both"></div>
@@ -19,7 +19,7 @@
     </div>
 
     <nav class="navbar-default details-container rowan-sub-main">
-        <a href="/trees">Home</a>
+        <a href="/">Home</a>
 
         @if ($context['type'] == 'genus' || $context['type'] == 'species' || $context['type'] == 'show')
             / <em><a href="/genus/{{$tree->genus}}">{{$tree->genus}}</a></em>
