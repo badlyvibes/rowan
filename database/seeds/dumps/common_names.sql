@@ -3829,3 +3829,9 @@ INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created
 INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5144, 'Ciprés Lorito', 45950, 149, 1, '2018-01-03 13:52:04', '2018-01-03 13:52:04');
 INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5145, 'Matai', 45951, 41, 1, '2018-01-03 13:52:58', '2018-01-03 13:52:58');
 INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5147, 'Black Pine', 45951, 41, 1, '2018-01-03 13:53:23', '2018-01-03 13:53:23');
+INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5148, 'Kanara Nutmeg', 26838, 41, 1, '2018-01-03 14:08:01', '2018-01-03 14:08:01');
+INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5149, 'Pindi', 26838, 76, 1, '2018-01-03 14:08:14', '2018-01-03 14:08:14');
+INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5150, 'Pintikkaya', 26838, 102, 1, '2018-01-03 14:10:00', '2018-01-03 14:10:00');
+INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5151, 'Udaipami', 26838, 102, 1, '2018-01-03 14:10:21', '2018-01-03 14:10:21');
+INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5152, 'Undaipanu', 26838, 102, 1, '2018-01-03 14:10:36', '2018-01-03 14:10:36');
+INSERT INTO rowan.common_names (id, name, tree_id, language_id, user_id, created_at, updated_at) VALUES (5153, 'Undapayin', 26838, 102, 1, '2018-01-03 14:10:43', '2018-01-03 14:10:43');
