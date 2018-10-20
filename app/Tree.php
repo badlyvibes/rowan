@@ -46,16 +46,9 @@ class Tree extends Model
         return 'trees_index';
     }
 
-    /*
     public function toSearchableArray()
     {
-        $extra_data = [];
-        $extra_data['common_names'] = array_map(function ($data) {
-            return $data['name'];
-        }, $this->commonNames->toArray());
-
-        return array_merge($this->toArray(), $extra_data);
+        return array_merge($this->toArray());
     }
-    */
 
 }
