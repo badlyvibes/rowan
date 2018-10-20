@@ -33,8 +33,12 @@
             / <em><a href="/genus/{{$tree->genus}}/species/{{$tree->species}}">{{$tree->species}}</a></em>
         @endif
 
-        @if ($context['type'] == 'search')
-            / <a href="/search/{{$context['term']}}">Search / {{$context['term']}}</a>
+        @if ($context['type'] == 'tree_search')
+            / <a href="/search/tree/{{$context['term']}}">Search / Tree / {{$context['term']}}</a>
+        @endif
+
+        @if ($context['type'] == 'common_name_search')
+            / <a href="/search/common_name/{{$context['term']}}">Search / Common Name / {{$context['term']}}</a>
         @endif
     </nav>
 

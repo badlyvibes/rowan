@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\CommonName;
 use App\Tree;
-
 use Request;
 
 class CommonNameController extends Controller

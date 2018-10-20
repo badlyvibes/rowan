@@ -1,5 +1,10 @@
-{!! Form::open(['url' => 'search/']) !!}
+{!! Form::open(['url' => 'search/tree/']) !!}
     <div class="form-group has-feedback" style="float:right;">
-        {!! Form::text('search', null, ['class' => 'form-control', 'placeholder' => 'Search']) !!}
+        {!! Form::text('tree_search', null, ['class' => 'form-control', 'placeholder' => 'Tree Search']) !!}
+    </div>
+{!! Form::close() !!}
+{!! Form::open(['url' => 'search/common_name/']) !!}
+    <div class="form-group has-feedback" style="float:right;">
+        {!! Form::text('common_name_search', null, ['class' => 'form-control', 'placeholder' => 'Common Name Search']) !!}
     </div>
 {!! Form::close() !!}

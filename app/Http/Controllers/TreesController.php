@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tree;
+use App\CommonName;
 use App\Language;
 use Request;
 
@@ -19,15 +20,37 @@ class TreesController extends Controller
         return $this->returnLayout($trees, $context);
     }
 
-    public function postSearch()
+    public function postTreeSearch()
     {
-        return redirect()->action('TreesController@getSearch', ['search' => Request::all()['search']]);
+        return redirect()->action(
+            'TreesController@getTreeSearch',
+            ['search' => Request::all()['tree_search']]
+        );
     }
 
-    public function getSearch($search)
+    public function postCommonNameSearch()
     {
-        $context = ['type' => 'search', 'term' => $search, 'title' => 'Search: ' . $search];
-        return $this->returnLayout(Tree::search($search)->paginate(10), $context);
+        return redirect()->action(
+            'TreesController@getCommonNameSearch',
+            ['search' => Request::all()['common_name_search']]
+        );
+    }
+
+    public function getCommonNameSearch($search = '')
+    {
+        $trees = [];
+        foreach (CommonName::search($search)->paginate(30) as $commonName) {
+            $trees[] = Tree::id($commonName['tree_id'])[0];
+        }
+
+        $context = ['type' => 'common_name_search', 'term' => $search, 'title' => 'Common Name Search: ' . $search];
+        return $this->returnLayout($trees, $context);
+    }
+
+    public function getTreeSearch($search = '')
+    {
+        $context = ['type' => 'tree_search', 'term' => $search, 'title' => 'Tree Search: ' . $search];
+        return $this->returnLayout(Tree::search($search)->paginate(30), $context);
     }
 
     public function show(Tree $tree)
