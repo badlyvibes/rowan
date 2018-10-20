@@ -16,7 +16,7 @@ class TreesController extends Controller
         for ($i = 0; $i <= 4; $i++) {
             $trees[] = Tree::id(rand(1, 60000))[0];
         }
-        $context = ['type' => 'index', 'title' => 'Index'];
+        $context = ['type' => 'index', 'title' => 'Home'];
         return $this->returnLayout($trees, $context);
     }
 
