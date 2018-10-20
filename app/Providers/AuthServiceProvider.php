@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\CommonName;
+use App\Policies\CommonNamePolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -14,7 +16,9 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         'App\Model' => 'App\Policies\ModelPolicy',
+        CommonName::class => CommonNamePolicy::class,
     ];
+
 
     /**
      * Register any authentication / authorization services.
@@ -25,6 +29,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('add-common_name', 'App\Policies\CommonNamePolicy@add');
     }
 }
