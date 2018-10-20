@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'queue' => env('SCOUT_QUEUE', true),
+    'queue' => env('SCOUT_QUEUE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ return [
     |
     | These options allow you to control the maximum chunk size when you are
     | mass importing data into the search engine. This allows you to fine
-    | tune these chunk sizes based on the capabilites of your machines.
+    | tune each of these chunk sizes based on the power of the servers.
     |
     */
 
@@ -58,6 +58,19 @@ return [
         'searchable' => 500,
         'unsearchable' => 500,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Soft Deletes
+    |--------------------------------------------------------------------------
+    |
+    | This option allows to control whether to keep soft deleted records in
+    | the search indexes. Maintaining soft deleted records can be useful
+    | if your application still needs to search for the records later.
+    |
+    */
+
+    'soft_delete' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -71,8 +84,12 @@ return [
     */
 
     'algolia' => [
-        'id' => env('ALGOLIA_APP_ID', 'SGFXC17K4C'),
-        'secret' => env('ALGOLIA_SECRET', '313f3487daeafbb08b57b7282b469070'),
+        'id' => env('ALGOLIA_APP_ID', ''),
+        'secret' => env('ALGOLIA_SECRET', ''),
+    ],
+
+    'tntsearch' => [
+      'storage'  => storage_path(),
     ],
 
 ];

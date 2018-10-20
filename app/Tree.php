@@ -43,9 +43,10 @@ class Tree extends Model
 
     public function searchableAs()
     {
-        return 'rowan_index';
+        return 'trees_index';
     }
 
+    /*
     public function toSearchableArray()
     {
         $extra_data = [];
@@ -55,5 +56,6 @@ class Tree extends Model
 
         return array_merge($this->toArray(), $extra_data);
     }
+    */
 
 }
