@@ -39,9 +39,11 @@ class TreesController extends Controller
     public function getCommonNameSearch($search = '')
     {
         $trees = [];
-        foreach (CommonName::search($search)->paginate(30) as $commonName) {
+        foreach (CommonName::search($search)->paginate(150) as $commonName) {
             $trees[] = Tree::id($commonName['tree_id'])[0];
         }
+
+        $trees = array_unique($trees);
 
         $context = ['type' => 'common_name_search', 'term' => $search, 'title' => 'Common Name Search: ' . $search];
         return $this->returnLayout($trees, $context);
@@ -50,7 +52,7 @@ class TreesController extends Controller
     public function getTreeSearch($search = '')
     {
         $context = ['type' => 'tree_search', 'term' => $search, 'title' => 'Tree Search: ' . $search];
-        return $this->returnLayout(Tree::search($search)->paginate(30), $context);
+        return $this->returnLayout(Tree::search($search)->paginate(150), $context);
     }
 
     public function show(Tree $tree)
