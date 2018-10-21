@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app()->getLocale() }}">
     <head>
         <title>{{$context['title']}} | Treenomony Database of Common Tree Names</title>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -40,6 +43,23 @@
         @if ($context['type'] == 'common_name_search')
             / <a href="/search/common_name/{{$context['term']}}">Search / Common Name / {{$context['term']}}</a>
         @endif
+
+        <span style="float: right">
+            @guest
+                <a href="{{ route('register') }}"><strong>Register</strong></a> | <a href="{{ route('login') }}"><strong>Log In</strong></a>
+            @else
+                {{ Auth::user()->name }}
+                 |
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Log Out
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            @endif
+        </span>
+
     </nav>
 
     @yield('content')
