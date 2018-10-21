@@ -22,34 +22,27 @@
     </div>
 
     <nav class="navbar-default details-container rowan-sub-main">
-        <a href="/">Home</a>
-
         @if ($context['type'] == 'genus' || $context['type'] == 'species' || $context['type'] == 'show')
-            / <em><a href="/genus/{{$tree->genus}}">{{$tree->genus}}</a></em>
-        @endif
-
-        @if ($context['type'] == 'genus')
-            : {{ count($trees) }} species
+            <em><a href="/genus/{{$tree->genus}}">{{$tree->genus}}</a></em>
+            @if ($context['type'] == 'genus')
+                : {{ count($trees) }} species
+            @endif
         @endif
 
         @if ($context['type'] == 'species' || $context['type'] == 'show')
-            / <em><a href="/genus/{{$tree->genus}}/species/{{$tree->species}}">{{$tree->species}}</a></em>
-        @endif
-
-        @if ($context['type'] == 'tree_search')
-            / <a href="/search/tree/{{$context['term']}}">Search / Tree / {{$context['term']}}</a>
-        @endif
-
-        @if ($context['type'] == 'common_name_search')
-            / <a href="/search/common_name/{{$context['term']}}">Search / Common Name / {{$context['term']}}</a>
+            <em><a href="/genus/{{$tree->genus}}/species/{{$tree->species}}">{{$tree->species}}</a></em>
+        @elseif ($context['type'] == 'tree_search')
+            <a href="/search/tree/{{$context['term']}}">Search: {{$context['term']}}</a>
+        @elseif ($context['type'] == 'common_name_search')
+            <a href="/search/common_name/{{$context['term']}}">Search: {{$context['term']}}</a>
+        @else
+            &nbsp;
         @endif
 
         <span style="float: right">
             @guest
                 <a href="{{ route('register') }}">Register</a> | <a href="{{ route('login') }}">Login</a>
             @else
-                {{ Auth::user()->name }}
-                 |
                 <a href="{{ route('logout') }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Logout
