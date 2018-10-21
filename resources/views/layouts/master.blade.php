@@ -29,7 +29,7 @@
         @endif
 
         @if ($context['type'] == 'genus')
-            : {{ count($trees) }} species in this genus
+            : {{ count($trees) }} species
         @endif
 
         @if ($context['type'] == 'species' || $context['type'] == 'show')
@@ -46,13 +46,13 @@
 
         <span style="float: right">
             @guest
-                <a href="{{ route('register') }}"><strong>Register</strong></a> | <a href="{{ route('login') }}"><strong>Log In</strong></a>
+                <a href="{{ route('register') }}">Register</a> | <a href="{{ route('login') }}">Login</a>
             @else
                 {{ Auth::user()->name }}
                  |
                 <a href="{{ route('logout') }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Log Out
+                    Logout
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
